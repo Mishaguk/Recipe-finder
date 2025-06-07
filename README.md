@@ -5,8 +5,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/Mishaguk/Recipe-finder.git
+   cd Recipe-finder
    ```
 
 2. Install dependencies:
@@ -15,7 +15,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
    npm install
    ```
 
-3. Create a `.env.local` file in the root directory and add your Spoonacular API key:
+3. Create or change `.env.local` file in the root directory and add your Spoonacular API key:
 
    ```
    SPOONACULAR_API_KEY=your_api_key_here

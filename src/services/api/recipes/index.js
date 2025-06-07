@@ -19,7 +19,9 @@ export async function getRecipes({ query, cuisine, maxReadyTime }) {
   );
 
   if (!res.ok) {
-    throw new Error('Failed to fetch recipes');
+    const text = await res.text();
+    console.error('Fetch error:', res.status, text);
+    throw new Error(`Failed to fetch recipe. Status: ${res.status}`);
   }
 
   return res.json();

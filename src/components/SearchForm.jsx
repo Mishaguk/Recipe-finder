@@ -1,4 +1,17 @@
 import { useState } from 'react';
+
+const cuisines = [
+  'African',
+  'Asian',
+  'American',
+  'British',
+  'Greek',
+  'Japanese',
+  'Italian',
+  'Mexican',
+  'Chinese',
+];
+
 const SearchForm = ({ onSearch }) => {
   const [query, setQuery] = useState('');
   const [cuisine, setCuisine] = useState('');
@@ -41,9 +54,11 @@ const SearchForm = ({ onSearch }) => {
           className="w-full rounded border border-yellow-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500"
         >
           <option value="">Select cuisine</option>
-          <option value="Italian">Italian</option>
-          <option value="Mexican">Mexican</option>
-          <option value="Chinese">Chinese</option>
+          {cuisines.map((cuisine) => (
+            <option value={cuisine} key={cuisine}>
+              {cuisine}
+            </option>
+          ))}
         </select>
       </div>
 
